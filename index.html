@@ -1,0 +1,248 @@
+
+<!DOCTYPE html>
+<html lang="TravelTriangle">
+    <head>
+        <meta charset="utf-8">
+      
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>TravelTriangle</title>
+        <link href="assignmenttravel\style.CSS" rel="stylesheet">
+        <script src="assignmenttravel\jscript.js"></script>
+
+
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+   
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    </head>
+    <body>
+    
+        
+<div class="container" style="height: 100vh; width: 90vw; background-color: rgba(249, 249, 250, 0.5)">
+        
+    <div class="row">
+
+
+
+
+<!-- Right margin area -->
+        <div class="col-md-3" style=" height: 90vh; border: 0.1vmax solid rgb(206, 204, 204); margin-top: 5%">
+    <div class="row">
+            <div class="col-md-10">
+                    <p style="margin-left: 0.5vm; margin-top:2%">Type of Destination</p>
+            </div>
+            <div class="col-md-1">
+                <button id="buu" onclick="but2()" >></button>
+            </div>
+
+        </div>
+        <div class="row">
+                <div class="col-md-6">
+                       <input type="checkbox" name="destinationType">India</input>
+                       
+                </div>
+                <div class="col-md-6">
+                        <input type="checkbox" name="destinationType">International</input>
+                </div>
+    
+            </div>
+
+
+
+            <div class="row" style="margin-top: 10%">
+                    <div class="col-md-10">
+                            <p style="margin-left: 0.5vm; margin-top:2%">Categories</p>
+                    </div>
+                    <div class="col-md-1">
+                        <button id="buu2" onclick="but()">></button>
+                    </div>
+        
+                </div>
+                <div class="row">
+                        <div class="col-md-6">
+                               <input type="checkbox" name="destinationType">Honeymoon</input>
+                               
+                        </div>
+                        <div class="col-md-6">
+                                <input type="checkbox" name="destinationType">Family</input>
+                        </div>
+                        <div class="col-md-6">
+                                <input type="checkbox" name="destinationType">Friends</input>
+                        </div>
+                    </div>
+
+
+                    <div class="row" style="margin-top: 10%">
+                            <div class="col-md-10">
+                                    <p style="margin-left: 0.5vm;">Filters</p>
+                            </div>
+                            <div class="col-md-1">
+                                <p style="color: gray; font-size: 12px; cursor: pointer"><a onclick="myReset()">Reset</a></p>
+                            </div>
+                
+                        </div>
+                        
+
+                        <div class="row" style="margin-top: 2%; ">
+                            <div class="col-md-12">  
+ To select multiple filters  <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#myModal">click here</button>
+
+
+
+
+
+ <!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+        
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Select Filters</h4>
+            </div>
+            <div class="modal-body">
+             
+<form id="myForm" action="/:destinationType" >
+                    <div class="row">
+                            <div class="col-md-6">
+                                   <input type="checkbox" name="destinationType">Honeymoon</input>
+                                   
+                            </div>
+                            <div class="col-md-6">
+                                    <input type="checkbox" name="destinationType">Family</input>
+                            </div>
+                            <div class="col-md-6">
+                                    <input type="checkbox" name="destinationType">Friends</input>
+                            </div>
+                        </div>
+            </div>
+         
+
+            <div class="modal-footer">
+                    <button value="submit_Form" onclick="myFunction()" type="submit" class="btn btn-default" data-submit="modal">Submit</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="reset" class="btn btn-default" onclick="myReset()">Reset</button>
+            </div>
+          </div>
+          
+        </div>
+    </form>
+      </div>
+    </div>
+
+  <div class="row" style="margin-left: 1%; margin-top:20% "> <div class="col-md-10" ><p style="margin-left: 0.5vm;">Select number of Days</p> </div>
+  <div class="col-md-2">&times;</div></div>
+                        <div class="col-md-6">
+                               <input type="checkbox" name="destinationType">Honeymoon</input>
+                               
+                        </div>
+                        <div class="col-md-6">
+                                <input type="checkbox" name="destinationType">Family</input>
+                        </div>
+                        <div class="col-md-6">
+                                <input type="checkbox" name="destinationType">Friends</input>
+                        </div>
+                   
+                            <div class="col-md-6">
+                                   <input type="checkbox" name="destinationType">Honeymoon</input>
+                                   
+                            </div>
+                            <div class="col-md-6">
+                                    <input type="checkbox" name="destinationType">Family</input>
+                            </div>
+                            <div class="col-md-6">
+                                    <input type="checkbox" name="destinationType">Friends</input>
+                            </div>
+                     
+
+
+</div></div>
+
+
+
+<!-- main body area -->
+            <div class="col-md-8" style=" height: 90vh; border: 0.1vmax solid rgb(206, 204, 204); margin-top: 5%">
+<div class="row">
+    <div class="col-md-9"><h2> List of Content</h2> </div>
+    <div class="col-md-3" style="border: solid 1px black; margin-top: 3%"> <a style="cursor: pointer;" data-toggle="modal" data-target="#myModal"> Explore Filters</a>
+    
+     <!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+        
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Select Filters</h4>
+            </div>
+            <div class="modal-body">
+             
+<form id="myForm" action="/:destinationType" >
+                    <div class="row">
+                            <div class="col-md-6">
+                                   <input type="checkbox" name="destinationType">Honeymoon</input>
+                                   
+                            </div>
+                            <div class="col-md-6">
+                                    <input type="checkbox" name="destinationType">Family</input>
+                            </div>
+                            <div class="col-md-6">
+                                    <input type="checkbox" name="destinationType">Friends</input>
+                            </div>
+                        </div>
+                        
+         
+
+            <div class="modal-footer">
+                    <button value="submit_Form" onclick="myFunction()" type="submit" class="btn btn-default" data-submit="modal">Submit</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="reset" class="btn btn-default" onclick="myReset()">Reset</button>
+            </div>
+          </div>
+          
+        </div>
+    </form>
+      </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    </div>
+</div>
+ </div>
+
+
+
+
+
+<!-- right margin area -->
+            <div class="col-md-1" style=" height: 90vh; border: 0.1vmax solid rgb(206, 204, 204); margin-top: 5%">
+                       
+                          <img src="#" style="margin-top: 20vmax">
+                       <figcaption>Compare Icon</figcaption>
+
+
+                       <img src="#" style="margin-top: 10vmax">
+                       <figcaption>Chat icon</figcaption>
+            
+             </div>
+
+
+       
+      
+
+    </div>
+</div>
+
+
+        
+  
+    </body>
+</html>
